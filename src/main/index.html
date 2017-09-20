@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Web Mashup: Display House Prices on a Map
+		</title>
+		<link rel="icon" type="image/png" href="resources/images/favicon.png"/>
+		<meta charset="utf-8"/>
+		<script id ="googleMaps" type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+	</head>
+  
+	<body onload="initialize();">
+    
+		<div align = "center">
+			<div id = "container" style="font-family:calibri; width:1500px">	
+				<center>
+					<h2>Residential property rates</h2>
+				</center>
+				<br/>
+				<div id = "input" style= "float: left;text-align: left ;border: 3px solid black; width: 300px; height:400">
+					<form>
+						<center>
+						  <strong>Address Details</strong>
+						</center>
+						<ul>
+							<label>
+								House address:
+								<br/>
+								<input type="text" id="address"/>
+							</label>
+							<br/>
+							<br/>
+							<label>
+								City: 
+								<br/>
+								<input type="text" id="city"/>
+							</label>
+							<br/>
+							<br/>
+							<label>
+								State and Zip: 
+								<br/>
+								<input type="text" id="statezip"/>
+							</label>
+							<br/>
+							<br/>
+						</ul>
+						<center>
+						  
+							<input type="button" onclick="sendRequest1();" value="Find"/>
+							&nbsp&nbsp
+							<button type= "refresh">Clear</button>
+						</center>
+						<br/>
+						
+					</form> 
+				  
+				</div>
+				
+				<div id="mapOutput" style=" float:left; height:500px; width:600px; border: 3px solid black; margin: 0px; padding: 0px">
+				</div>
+				
+				
+				<div id="textPanel" style="overflow:auto;text-align:left;border: 3px solid black">
+					<center>
+					<strong>Text Output:</strong>
+					</center>
+					<br/>
+					<div id="textOutput" style=" float:left; height:300px; width:550px; margin: 0px; padding: 0px; overflow:auto">
+					</div>
+				  
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
